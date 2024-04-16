@@ -1,35 +1,35 @@
 body {
     margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #70c5ce;
+    overflow: hidden;
 }
 
-#gameContainer {
+#gameArea {
     position: relative;
     width: 400px;
     height: 600px;
-    border: 2px solid black;
-    background-color: #a3ffba;
+    background-color: skyblue;
 }
 
 #bird {
     position: absolute;
+    top: 50%;
     left: 50px;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 30px;
     background-color: yellow;
-    bottom: 50%;
 }
 
-#pipe {
+#pipeTop, #pipeBottom {
     position: absolute;
-    width: 80px;
-    height: 400px;
+    width: 50px;
     background-color: green;
+}
+
+#pipeTop {
+    top: 0;
+}
+
+#pipeBottom {
     bottom: 0;
 }
 
@@ -39,25 +39,3 @@ body {
     right: 20px;
     font-size: 24px;
 }
-
-#gameOver {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-#records {
-    margin-top: 20px;
-}
-
-#recordsTable {
-    margin: 0 auto;
-}
-
-#recordsTable th, #recordsTable td {
-    padding: 5px 10px;
-    border-bottom: 1px solid #000;
-} 
